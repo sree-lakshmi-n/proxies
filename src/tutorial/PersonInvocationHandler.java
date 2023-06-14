@@ -13,6 +13,6 @@ public class PersonInvocationHandler implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         System.out.println("Hi!");
-        return null;
+        return method.invoke(person, args);
     }
 }
